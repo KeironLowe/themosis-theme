@@ -47,18 +47,6 @@ $theme->assets([
 
 /*
 |--------------------------------------------------------------------------
-| Theme Views
-|--------------------------------------------------------------------------
-|
-| Register theme view paths. By default, the theme is registering
-| the "views" directory but you can add as many directories as you want
-| from the theme.php configuration file.
-|
-*/
-$theme->views($theme->config('theme.views', []));
-
-/*
-|--------------------------------------------------------------------------
 | Theme Service Providers
 |--------------------------------------------------------------------------
 |
@@ -67,20 +55,6 @@ $theme->views($theme->config('theme.views', []));
 |
 */
 $theme->providers($theme->config('theme.providers', []));
-
-/*
-|--------------------------------------------------------------------------
-| Theme includes
-|--------------------------------------------------------------------------
-|
-| Auto includes files by providing one or more paths. By default, we setup
-| an "inc" directory within the theme. Use that "inc" directory to extend
-| your theme features. Nested files are also included.
-|
-*/
-$theme->includes([
-    $theme->getPath('inc')
-]);
 
 /*
 |--------------------------------------------------------------------------
@@ -106,17 +80,6 @@ $theme->menus($theme->config('menus'));
 
 /*
 |--------------------------------------------------------------------------
-| Theme Sidebars
-|--------------------------------------------------------------------------
-|
-| Register theme sidebars. Sidebars are configured in your theme
-| sidebars.php configuration file.
-|
-*/
-$theme->sidebars($theme->config('sidebars'));
-
-/*
-|--------------------------------------------------------------------------
 | Theme Support
 |--------------------------------------------------------------------------
 |
@@ -125,14 +88,3 @@ $theme->sidebars($theme->config('sidebars'));
 |
 */
 $theme->support($theme->config('support', []));
-
-/*
-|--------------------------------------------------------------------------
-| Theme Templates
-|--------------------------------------------------------------------------
-|
-| Register theme templates. Templates are configured in your theme
-| templates.php configuration file.
-|
-*/
-$theme->templates($theme->config('templates', []));

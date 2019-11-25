@@ -7,5 +7,6 @@
  * @see https://developer.wordpress.org/reference/functions/register_nav_menus/
  */
 return [
-    'menu-1' => __('Header Navigation', THEME_TD),
+    'main_menu'   => __('Main Menu', THEME_TD),
+    'footer_menu' => __('Footer Menu', THEME_TD),
 ];
