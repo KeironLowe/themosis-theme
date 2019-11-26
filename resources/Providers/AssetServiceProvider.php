@@ -2,9 +2,9 @@
 
 namespace Theme\Providers;
 
-use Illuminate\Support\ServiceProvider;
+use App\Resource;
 use Themosis\Core\ThemeManager;
-use Themosis\Support\Facades\Asset;
+use Illuminate\Support\ServiceProvider;
 
 class AssetServiceProvider extends ServiceProvider
 {
@@ -19,11 +19,11 @@ class AssetServiceProvider extends ServiceProvider
         $theme = $this->app->make('wp.theme');
 
         // CSS
-        Asset::add('styles', 'css/app.css', [], $theme->getHeader('version'))->to('front');
+        Resource::asset('styles', 'css/app.css')->to('front');
 
         // Scripts
-        Asset::add('manifest', 'js/manifest.js', [], '/dist/js/manifest.js')->to('front');
-        Asset::add('vendor', 'js/vendor.js', [], '/dist/js/vendor.js')->to('front');
-        Asset::add('app', 'js/app.js', [], '/dist/js/app.js')->to('front');
+        Resource::asset('manifest', 'js/manifest.js', [], true)->to('front');
+        Resource::asset('vendor', 'js/vendor.js', [], true)->to('front');
+        Resource::asset('app', 'js/app.js', [], true)->to('front');
     }
 }
