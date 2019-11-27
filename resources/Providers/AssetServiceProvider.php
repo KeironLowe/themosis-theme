@@ -2,7 +2,7 @@
 
 namespace Theme\Providers;
 
-use App\Resource;
+use App\Helpers\Resource;
 use Themosis\Core\ThemeManager;
 use Illuminate\Support\ServiceProvider;
 
